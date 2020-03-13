@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script >
+function reduce(array,combine,start){
+    var current=start;
+    for(var element of array){
+        current=combine(current,element);
+    }
+    return current;
+}
+var date=[
+    {name:'计算机安装与维护',credut:2}
+    ,{name:'静态网页制作',credut: 2}
+    ,{name:'计算机编程基础',credut: 2}
+    ,{name:'大学英语',credut: 2}
+    ,{name:'软件技术导论',credut: 2}
+];
+console.log(
+    reduce(data,function(a,b){
+        return a<b.credit?a:b.credit;
+    }
+    ,10)
+);
+    </script>
+    
+</body>
+</html>
