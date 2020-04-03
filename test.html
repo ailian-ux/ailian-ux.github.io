@@ -1,6 +1,10 @@
-<script>
+
+    <body>
+        <h1 id="header">hello</h1>  
+        <script src='./jquery-3.4.1.js'></script>
+   <script>     
     var value=11;
-    var initvalue=22;
+    var initvalue=22 //Number (prompt("输入一个数字","22"));
     function addtion(){
         var value=initvalue;
         return function add(x){
@@ -11,5 +15,13 @@
     var func=addtion();
     func(33);
     func(44);
+    //console.log(window.location.href="http://www.baidu.com")
+
+var x=document.getElementById("header");
+x.innerText=x.innerText+"123";
+$(function() {
+    $("#header").text($("#header").text()+"!!!!!!!!!!!!")
+})
 
     </script>
+    </body>
